@@ -1,0 +1,32 @@
+$white: #fff;
+$black: #000;
+$darkestGray: #212121;
+$darkGray: #666;
+$midGray: #999;
+$lightGray: #ddd;
+$lightestGray: #f4f7f8;
+$lightBlue: #6cf;
+$accentBlue: #39c;
+$darkBlue: #101742;
+$midBlue: #069;
+
+$link: $midBlue;
+$linkHover: $accentBlue;
+$text: $darkGray;
+$textLight: $white;
+$title: $darkBlue;
+$accentLight: $lightBlue;
+$accentDark: $midBlue;
+$bg: $white;
+$bgSecondary: $lightestGray;
+$bgDark: $darkBlue;
+
+$base: 40px;
+
+$duration: 0.3s;
+$easing: cubic-bezier(.785, .135, .15, .86);
+$easingLight: ease;
+
+$mainFont: 'Lato', sans-serif;
+$titleFont: 'Open Sans', sans-serif;
+$quoteFont: 'Playfair Display', serif;

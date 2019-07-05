@@ -1,0 +1,60 @@
+// faq styles
+.faq{
+    border-bottom: 1px dotted $accentBlue;
+    ._Q{
+        font-weight: 400;
+        background: $bgSecondary;
+        padding: $base/4 $base $base/4 $base/2;
+        font-size:1.2em;
+        position: relative;
+        color:$accentBlue;
+        cursor: pointer;
+        transition: all $duration $easing;
+
+        @include breakpoint(md){
+            padding: $base/3 $base $base/3 $base/2;
+        }
+
+        &:before,
+        &:after{
+            width:$base/2;
+            height: 1px;
+            position: absolute;
+            right:$base/2;
+            top:calc(50% - 1px);
+            background: $accentBlue;
+            content: '';
+            opacity: 1;
+            transition: opacity $duration $easing;
+
+            @include breakpoint(md){
+                top:$base/1.70;
+            }
+        }
+
+        &:after{
+            transform: rotate(90deg);
+        }
+
+        &.-open{
+            background: $bg;
+            &:after{
+                opacity:0;
+            }
+
+            & + ._A{
+                max-height: 400px;
+                opacity: 1;
+                padding: $base/3 $base/4 $base/2 $base;
+            }
+        }
+    }
+
+    ._A{
+        padding: 0 $base/4 0 $base;;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all $duration $easing;
+    }
+}

@@ -1,0 +1,26 @@
+extends ../_layouts/base
+
+include ../_modules/section-title/section-title
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main._media.-vertical-space-top.-dark-bg
+        .container-fluid.-vertical-space-top.-dark-bg
+            .row
+                .col-xs-24.col-sm-18.col-sm-offset-3.col-md-16.col-md-offset-4
+                    +section-title(site.data.media.heading, site.data.media.subHeading)
+                    
+            .row._gallery.-smaller
+                each item in site.data.media.items
+                    if ( item.type == "photo" )
+                        .col-xs-12.col-sm-6.col-md-4._item(data-toggle="modal",data-target="#lightbox", data-mode=item.type, class="-#{item.type}")
+                            img(src=item.url, class="_image")
+                            
+                    if  ( item.type == "video" )
+                        .col-xs-12.col-sm-6.col-md-4._item(data-toggle="modal",data-target="#lightbox", data-mode=item.type, class="-#{item.type}")
+                            img(src="http://img.youtube.com/vi/#{item.url}/maxresdefault.jpg", class="_video", data-video=item.url)
+                            
+    include ../_modules/modal/modal

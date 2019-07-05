@@ -1,0 +1,30 @@
+{
+    "heading": "Restaurantes Recomendados",
+    "subHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    "restaurants": [
+        {
+            "link": "#",
+            "img": "http://www.arakur.com/wp-content/uploads/2013/03/rest%C3%B3-2.jpg",
+            "title": "Restaurante 1",
+            "desc": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "link": "#",
+            "img": "http://destinoushuaia.com/wp-content/uploads/2016/11/Buffet.jpg",
+            "title": "Restaurante 2",
+            "desc": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "link": "#",
+            "img": "http://elviejomarinoush.com/wp-content/uploads/2016/11/IMG_5561-hd.jpg",
+            "title": "Restaurante 3",
+            "desc": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "link": "#",
+            "img": "http://daytours4u.com/en/wp-content/uploads/sites/2/2016/11/6297443489_37349f0c04_o-3.jpg",
+            "title": "Restaurante 4",
+            "desc": "Lorem ipsum dolor sit amet"
+        }
+    ]
+}

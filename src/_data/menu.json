@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Traslados",
+        "url": "/traslados"
+    },
+    {
+        "name": "Excursiones",
+        "url": "/excursiones"
+    },
+    {
+        "submenu": true,
+        "name": "Recomendados",
+        "options": [
+            {
+                "name": "Restaurantes",
+                "url": "/restaurantes"
+            },
+            {
+                "name": "Hoteles",
+                "url": "/hoteles"
+            }
+        ]
+    },
+    {
+        "name": "Fotos y Videos",
+        "url": "/fotos-y-videos"
+    },
+    {
+        "name": "Preguntas Frecuentes",
+        "url": "/preguntas-frecuentes"
+    },
+    {
+        "name": "Contacto",
+        "url": "/contacto"
+    }
+]

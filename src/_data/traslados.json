@@ -1,0 +1,18 @@
+{
+    "heading": "Traslados",
+    "subHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "list": [
+        {
+            "link": "#",
+            "img": "http://mla-s2-p.mlstatic.com/pasajesviajestraslados-en-combi-puerta-a-puerta-a-la-costa-21283-MLA20206152284_122014-F.jpg",
+            "title": "Traslado 1",
+            "desc": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "link": "#",
+            "img": "http://blog.faro.travel/wp-content/uploads/2015/06/combi.jpg",
+            "title": "Traslado 2",
+            "desc": "Lorem ipsum dolor sit amet"
+        }
+    ]
+}

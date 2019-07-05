@@ -1,0 +1,76 @@
+._gallery{
+    ._item{
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 50%;
+        position: relative;
+        background: $black;
+
+        @include breakpoint(sm){
+            padding-bottom: 33.3%;
+        }
+        @include breakpoint(md){
+            padding-bottom: 25%;
+        }
+
+        img{
+            position: absolute;
+            left:50%;
+            transform: translateX(-50%);
+            height:100%;
+            width: auto;
+            min-width: 100%;
+            transition: all $duration $easing;
+        }
+
+        &:hover{
+            cursor: pointer;
+
+            img{
+                opacity: .4;
+            }
+
+            &:before{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        &.-photo{
+            &:before{
+                content: "\f00e";
+            }
+        }
+
+        &.-video{
+            &:before{
+                content: "\f16a";
+            }
+        }
+
+        &:before{
+            font-family: 'FontAwesome';
+            line-height: 50px;
+            color:$white;
+            font-size: 50px;
+            position: absolute;
+            top:calc(50% - 25px);
+            left:calc(50% - 25px);
+            z-index:10;
+            opacity: 0;
+            transform: translateY(-150%);
+            transition: all $duration $easing;
+        }
+    }
+
+    &.-smaller{
+        ._item{
+            @include breakpoint(sm){
+                padding-bottom: 33.3%;
+            }
+            @include breakpoint(md){
+                padding-bottom: 16.5%;
+            }
+        }
+    }
+}

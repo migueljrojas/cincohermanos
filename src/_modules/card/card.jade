@@ -1,0 +1,9 @@
+mixin card(data)
+
+    div.card
+        a._link(href="#{data.link}")
+        ._img
+            img(src="#{data.img}")
+        h3._title= data.title
+        p._desc= data.desc
+        

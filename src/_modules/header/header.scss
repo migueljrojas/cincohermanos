@@ -1,0 +1,347 @@
+.header {
+    background: transparentize($bg, .05);
+    border-bottom: 1px solid $lightestGray;
+    min-height: 50px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all $duration $easing;
+    width: 100%;
+    z-index: 1000;
+
+    @include breakpoint(md) {
+        display: flex;
+    }
+
+    #weather{
+        color:$darkBlue;
+        transition: all $duration $easing;
+
+        @include breakpoint(md){
+            background: $accentLight;
+        }
+    }
+
+    ._logo {
+        max-width: 300px;
+        margin: $base/2 auto;
+        opacity: 0;
+        transition: all $duration $easing;
+
+        img{
+            width:100%;
+        }
+
+        @include breakpoint(md) {
+            background: $white;
+            height: 60px;
+            opacity: 1;
+            position: absolute;
+            margin: 0;
+            width:230px;
+            padding: $base/4;
+        }
+    }
+
+    .container {
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        position: relative;
+        transition: all $duration $easing;
+        margin-top: 50px;
+
+        @include breakpoint(md) {
+            height: auto;
+            overflow: visible;
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
+
+    ._hamburguer{
+        border-left: 1px solid $lightestGray;
+        cursor: pointer;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        z-index: 10;
+        transition: all $duration $easing;
+
+        span{
+            background: $accentDark;
+            display: block;
+            height:1px;
+            left:0;
+            margin: 10px auto 0;
+            position: relative;
+            right:0;
+            transition: all .3s ease;
+            width:70%;
+            &:first-child{
+                margin-top: 13px;
+            }
+        }
+
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+
+    ._nav {
+        border-top: 1px solid $accentLight;
+        border-bottom: 1px solid $accentLight;
+
+        @include breakpoint(md) {
+            border:none;
+            float: left;
+            padding: 5px 0 5px 240px;
+        }
+    }
+
+    ._social {
+        margin-top: $base/2;
+        opacity: 0;
+        transition: opacity $duration $easing;
+
+        @include breakpoint(md) {
+            opacity:1;
+            float: right;
+            margin-top: 0;
+            padding: 10px 0;
+        }
+    }
+
+    ._menu {
+
+        & > li {
+            border-bottom: 1px dotted $accentLight;
+            position: relative;
+
+            @include breakpoint(md) {
+                display: inline-block;
+                border-bottom: none;
+                margin-right: -3px;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            & > a {
+                display: block;
+                font-size: 18px;
+                height: $base;
+                line-height: $base;
+                text-transform: capitalize;
+
+                @include breakpoint(md) {
+                    display: inline-block;
+                    padding: 0 $base/6;
+                    font-size: 16px;
+                }
+            }
+
+            &:hover{
+                ._submenu {
+                    max-height: $base*4;
+
+                    li{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    ._submenu{
+        overflow: hidden;
+        max-height:0;
+        transition: all $duration $easing;
+
+        @include breakpoint(md) {
+            position: absolute;
+            top:47px;
+        };
+
+        li{
+            border-bottom: 1px dotted $accentLight;
+            opacity: 0;
+            transition: all $duration $easing;
+
+            &:last-child{
+                border-bottom: 2px solid $accentLight;
+            }
+
+            a {
+               display: block;
+               font-size: 18px;
+               height: $base;
+               line-height: $base;
+               background: $lightestGray;
+               padding: 0 $base/4;
+
+               @include breakpoint(md) {
+                   width:180px;
+                   text-align: left;
+               }
+           }
+        }
+    }
+
+    ._lang {
+        padding-top: 15px;
+
+        @include breakpoint(md){
+            float: right;
+            margin-right: 10px;
+        };
+
+        li{
+            display: inline-block;
+
+            &:not(:last-child){
+                border-right: 1px solid $accentLight;
+            }
+        }
+        a{
+            padding: $base/8;
+            font-size: 0.9em;
+            cursor: pointer;
+
+            &.-active{
+                font-weight: 600;
+                pointer-events: none;
+            }
+
+            &:hover{
+                background: $lightestGray;
+            }
+        }
+    }
+
+    &.-ontop{
+        background: transparent;
+        border-bottom: 1px solid transparentize($lightestGray, .6);
+
+        ._hamburguer{
+            border-left: 1px solid transparentize($lightestGray, .6);
+
+            span{
+                background: $bg;
+            }
+        }
+
+        #weather{
+            color:$white;
+
+            @include breakpoint(md){
+                background: transparentize($darkBlue, .3);
+            }
+        }
+
+        ._menu {
+            li{
+                a{
+                    color:$bg;
+
+                    &:hover{
+                        background: transparentize($bg, .9);
+                    }
+                }
+            }
+
+            ._submenu{
+                a{
+                    background: transparentize($darkBlue, .1);
+
+                    &:hover{
+                        background: $darkBlue;
+                    }
+                }
+            }
+        }
+
+        ._lang {
+            a{
+                color:$bg;
+
+                &:hover{
+                    color:$accentBlue;
+                }
+            }
+        }
+    }
+
+    &.-open{
+        background: $bg;
+        max-height: 100vh;
+
+        ._logo {
+            opacity: 1;
+        }
+
+        ._hamburguer{
+            border-left: 1px solid $lightestGray;
+
+            span{
+                background: $accentDark;
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:nth-child(1),
+                &:nth-child(3){
+                    position: absolute;
+                    top:25%;
+                    transform: rotate(45deg);
+                    width: 60%;
+                }
+                &:nth-child(3){
+                    top:30%;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .container {
+            border-top: 2px solid $lightestGray;
+            height: calc(100vh - 50px);
+            margin-top: 50px;
+            opacity: 1;
+        }
+
+        ._menu {
+            li{
+                a{
+                    color:$accentBlue;
+                }
+            }
+
+            ._submenu {
+                li{
+                    a{
+                        background: $lightestGray;
+                    }
+                }
+            }
+        }
+
+        ._social {
+            opacity: 1;
+        }
+
+        ._lang {
+            a{
+                color:$accentBlue;
+            }
+        }
+    }
+}
+
+
+#google_translate_element,
+.skiptranslate {
+    display: none!important;
+}

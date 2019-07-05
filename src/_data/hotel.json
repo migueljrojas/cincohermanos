@@ -1,0 +1,30 @@
+{
+    "heading": "Hoteles Recomendados",
+    "subHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
+    "hotels": [
+        {
+            "link": "#",
+            "img": "http://www.arakur.com/wp-content/uploads/2015/05/exterior-hotel-piscina.jpg",
+            "title": "Hotel 1",
+            "desc": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "link": "#",
+            "img": "http://beltafrajumar.com/beltafrajumarprojects/wp-content/uploads/2014/06/ushuaia-beach-hotel-01.jpg",
+            "title": "Hotel 2",
+            "desc": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "link": "#",
+            "img": "https://r-ec.bstatic.com/images/hotel/max1024x768/341/34142808.jpg",
+            "title": "Hotel 3",
+            "desc": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "link": "#",
+            "img": "http://www.uniqhotels.com/media/hotels/74/18.%20im%20on%20the%20top%20of%20the%20world.jpg",
+            "title": "Hotel 4",
+            "desc": "Lorem ipsum dolor sit amet"
+        }
+    ]
+}

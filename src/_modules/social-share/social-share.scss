@@ -1,0 +1,22 @@
+// social-share styles
+._social {
+    li {
+        display: inline-block;
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    a {
+        background: $link;
+        border-radius: 50%;
+        color:$white;
+        display: block;
+        height: $base*0.75;
+        line-height: $base*0.75;
+        text-align: center;
+        width: $base*0.75;
+    }
+}

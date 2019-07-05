@@ -1,0 +1,26 @@
+// footer styles
+.footer{
+    background: $bg;
+    padding: $base/2 0;
+    text-align: center;
+
+    @include breakpoint(sm){
+        padding: $base 0;
+    };
+
+    ._social{
+        a{
+            background: $midGray;
+        }
+    }
+
+    p{
+        color:$midGray;
+        line-height: 30px;
+        margin: 0;
+    }
+
+    p.strong{
+        font-weight:600;
+    }
+}

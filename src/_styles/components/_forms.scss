@@ -1,0 +1,37 @@
+._form{
+    input,
+    textarea{
+        border:1px solid $lightestGray;
+        outline:none;
+        background: $lightestGray;
+        border-radius:5px;
+        width:100%;
+        font-size: 14px;
+        font-weight: 600;
+        padding: $base/4;
+        color:$midGray;
+        margin-bottom: $base/4;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    label{
+        color:$midGray;
+    }
+
+    ::placeholder{
+        opacity:.3;
+    }
+    ._submit{
+        color:#fff;
+        background: $link;
+        width: 300px;
+        transition: all .3s ease;
+
+        &:hover{
+            background: $accentLight;
+        }
+    }
+}

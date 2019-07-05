@@ -1,0 +1,21 @@
+extends ../_layouts/base
+
+include ../_modules/hero/hero
+include ../_modules/faq/faq
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.faqs
+    
+        +hero('/images/faqs/hero.jpg', site.data.faq.heading, site.data.faq.subHeading)
+        
+        .container.-vertical-space
+    
+            ul.row
+                each faq in site.data.faq.faqs
+                    li.col-xs-24.col-sm-18.col-sm-offset-3.col-md-16.col-md-offset-4
+                        +faq(faq.Q, faq.A)
+        

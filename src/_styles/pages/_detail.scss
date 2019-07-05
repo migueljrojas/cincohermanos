@@ -1,0 +1,25 @@
+.detail {
+    dt,dd{
+        float:left;
+    }
+    dt{
+        clear: left;
+        width:60px;
+        color:$accentBlue;
+    }
+    dd{
+        width:calc(100% - 60px);
+    }
+
+    ._testimonios {
+        ._photocol {
+            display: none;
+        }
+        ._testimonialcol{
+            @include breakpoint(md) {
+                position: relative;
+                left:25%
+            }
+        }
+    }
+}

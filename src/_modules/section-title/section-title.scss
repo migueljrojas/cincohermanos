@@ -1,0 +1,48 @@
+.section-title {
+    margin-bottom: $base;
+    text-align: center;
+
+    @include breakpoint(sm){
+        margin-bottom: $base*2;
+    }
+
+    ._heading{
+        color:$darkBlue;
+        font-size: 1.8em;
+        font-weight: 700;
+        margin: 0;
+
+        @include breakpoint(sm){
+            font-size: 2.2em;
+        }
+    }
+
+    ._sub-heading{
+        margin: 0;
+        font-size:1.2em;
+
+        @include breakpoint(sm){
+            font-size: 1.4em;
+        }
+    }
+
+    ._divider {
+        margin: $base/2 auto;
+        display: block;
+        width: 150px;
+        height: 5px;
+        background: $bgSecondary;
+        position: relative;
+
+        &:before{
+            position: absolute;
+            content: '';
+            background: $accentBlue;
+            top:0;
+            bottom:0;
+            left:30%;
+            right:30%;
+            display: block;
+        }
+    }
+}

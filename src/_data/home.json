@@ -1,0 +1,92 @@
+{
+    "topHero": {
+        "heading": "Descubrí lo que esconde <br/> <span>el fin del mundo</span>",
+        "subHeading": "En CINCO HERMANOS Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+        "CTA": "Reserva ya!"
+    },
+    "services": {
+        "heading": "Nuestros Servicios",
+        "subHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "tabs": [
+            {
+                "key": "traslados",
+                "icon": "bus",
+                "name": "Traslados"
+            },
+            {
+                "key": "excursiones",
+                "icon": "leaf",
+                "name": "Excursiones"
+            }
+        ]
+    },
+    "quotebreak": "La magia única de <br/><span></span>los confines del sur",
+    "testimonials": {
+        "heading": "Recomendados",
+        "subHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "slides":[
+            {
+                "photo": "http://media.expedia.com/hotels/1000000/150000/140600/140596/140596_275_z.jpg",
+                "title": "Hotel Ushiaia Inn",
+                "desc": "Lorem ipsum dolor sit amet",
+                "testimonial": {
+                    "name": "John Doe",
+                    "from": "Buenos Aires",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            },
+            {
+                "photo": "http://torrecatalunya.expohotels.com/wp-content/uploads/2014/12/Visual-Eje-__H81.jpg",
+                "title": "Restaurant Calafate Steakhouse",
+                "desc": "Lorem ipsum dolor sit amet",
+                "testimonial": {
+                    "name": "John Doe",
+                    "from": "Buenos Aires",
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }
+            }
+        ]
+    },
+    "gallery": {
+        "heading": "Fotos y Videos",
+        "subHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "items": [
+            {
+                "type": "photo",
+                "url": "http://www.cheargentina.com/wp-content/uploads/2013/07/ushuaia-que-ver.jpg"
+            },
+            {
+                "type": "photo",
+                "url": "http://viajar.fueraderuta.com/img/blog/ushuaia.jpg"
+            },
+            {
+                "type": "photo",
+                "url": "http://www.switchbacktravel.com/sites/default/files/images/articles/Ushuaia%2C%20Argentina.jpg"
+            },
+            {
+                "type": "photo",
+                "url": "https://www.101viajes.com/sites/default/files/ushuaia-argentina.jpg"
+            },
+            {
+                "type": "photo",
+                "url": "https://images.clarin.com/2015/04/17/SJbiMweNl_930x525.jpg"
+            },
+            {
+                "type": "photo",
+                "url": "http://www.region.com.ar/productos/semanario/archivo/954-pdf-fotos/el-calafate1.jpg"
+            },
+            {
+                "type": "photo",
+                "url": "http://www.mundoaustral.com.ar/es/fotos/tour-25-0-ch.jpg"
+            },
+            {
+                "type": "photo",
+                "url": "http://www.argentinianexplorer.com/images/tour/tour-argentina/patagonia/ushuaia-03.jpg"
+            }
+        ]
+    },
+    "contact": {
+        "heading": "Contactanos",
+        "subHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+}

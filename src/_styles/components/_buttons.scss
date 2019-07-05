@@ -1,0 +1,45 @@
+a._button,
+button._button,
+._button {
+    background: $accentLight;
+    border-radius: 5px;
+    color: $darkBlue;
+    display: inline-block;
+    font-family: $titleFont;
+    font-size: 18px;
+    font-weight: 700;
+    height: $base;
+    line-height: $base;
+    max-width: 300px;
+    padding: 0 40px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all $duration $easingLight;
+    letter-spacing: -1px;
+
+    &:hover{
+        background: $linkHover;
+        text-decoration: none;
+        color:$darkBlue;
+    }
+
+    &.-dark {
+        background: $link;
+        color: $accentLight;
+
+        &:hover{
+            color: $accentLight;
+        }
+    }
+
+    &.-large {
+        height: $base*1.5;
+        line-height: $base*1.5;
+        font-size: 24px;
+    }
+
+    &.-small {
+        height: $base*0.75;
+        line-height: $base*0.75;
+    }
+}

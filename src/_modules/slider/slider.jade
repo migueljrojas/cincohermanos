@@ -1,0 +1,20 @@
+mixin slider(slides)
+
+    .slider.container
+        each slide in slides
+            div._slide
+                ._photocol
+                    ._img
+                        img(src=slide.photo)
+                    h3._title= slide.title
+                ._testimonialcol
+                    p._quote
+                        span "
+                        | #{slide.testimonial.text}
+                        span "
+                    p.small.strong
+                        | #{slide.testimonial.name}, #{slide.testimonial.from}
+                    
+                    
+                        
+                

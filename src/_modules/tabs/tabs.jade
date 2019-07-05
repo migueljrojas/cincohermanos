@@ -1,0 +1,11 @@
+mixin tabs(tabs)
+    ul.tabs
+        each tab in tabs
+            li(data-target="#{tab.key}")
+                if(tab.icon) 
+                    span._icon
+                        i(class="fa fa-#{tab.icon}")
+                    span._tabname=tab.name
+                else
+                    span._tabname=tab.name
+            

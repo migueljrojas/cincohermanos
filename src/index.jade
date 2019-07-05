@@ -1,0 +1,142 @@
+extends _layouts/base
+
+include _modules/section-title/section-title
+include _modules/tabs/tabs
+include _modules/card/card
+include _modules/slider/slider
+
+block content
+    main.home
+        section._tophero
+            h1._headtitle!= site.data.home.topHero.heading
+            p._subheading= site.data.home.topHero.subHeading
+            a._button.-large(href="/contacto")= site.data.home.topHero.CTA
+            
+        section._services
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-sm-offset-3.col-md-16.col-md-offset-4
+                        +section-title(site.data.home.services.heading, site.data.home.services.subHeading)
+                        
+            .container-fluid.-alt-bg.-vertical-space
+                .row
+                    .col-xs-24
+                        +tabs(site.data.home.services.tabs)
+                        
+                        ._tab-container
+                            each tab in site.data.home.services.tabs
+                                div(class="_tab", data-id="#{tab.key}")
+                                    if ( tab.key == 'traslados' )
+                                        ul
+                                            each item in site.data.traslados.list
+                                                li
+                                                    +card(item)
+                                    if ( tab.key == 'excursiones' )
+                                        ul
+                                            each item in site.data.excursiones.list
+                                                li
+                                                    +card(item)
+                    
+        section._quotebreak
+            div._imgcover
+                img(src="/images/home/quote.jpg")
+            p._quotebreak__quote!= site.data.home.quotebreak
+                    
+        section._testimonios
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-sm-offset-3.col-md-16.col-md-offset-4
+                        +section-title(site.data.home.testimonials.heading, site.data.home.testimonials.subHeading)
+            
+            ._slider-container.-alt-bg
+                +slider(site.data.home.testimonials.slides)
+                    
+                        
+        section._gallery
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-sm-offset-3.col-md-16.col-md-offset-4
+                        +section-title(site.data.home.gallery.heading, site.data.home.gallery.subHeading)
+            .container-fluid
+                .row
+                    each item in site.data.home.gallery.items
+                        if ( item.type == "photo" )
+                            .col-xs-12.col-sm-8.col-md-6._item(data-toggle="modal",data-target="#lightbox", data-mode=item.type, class="-#{item.type}")
+                                img(src=item.url, class="_image")
+                                
+                        if  ( item.type == "video" )
+                            .col-xs-12.col-sm-8.col-md-6._item(data-toggle="modal",data-target="#lightbox", data-mode=item.type, class="-#{item.type}")
+                                img(src="http://img.youtube.com/vi/#{item.url}/maxresdefault.jpg", class="_video", data-video=item.url)
+                                                
+        section.contact._contact.-alt-bg
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-sm-offset-3.col-md-16.col-md-offset-4
+                        +section-title(site.data.home.contact.heading, site.data.home.contact.subHeading)
+                .row
+                    .col-xs-24.col-sm-12
+                        ._block
+                            h4 Seguínos en las redes sociales
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            ul._social
+                                each item in site.data.social
+                                    li
+                                        a(href=item.url)
+                                            i(class="fa fa-#{item.name}")
+                            
+                        ._block
+                            .row    
+                                .col-xs-24.col-sm-12._data
+                                    h4 Dirección
+                                    dl
+                                        dt
+                                            i.fa.fa-map-marker
+                                        dd  Calle 1234, Ushuaia
+                                        
+                                        dt
+                                            i.fa.fa-phone
+                                        dd  (123) 456-7890
+                                        
+                                        dt
+                                            i.fa.fa-envelope
+                                        dd  
+                                            a(href="mailto:contacto@cincohermanos.com") contacto@cincohermanos.com
+                                            
+                                        
+                                .col-xs-24.col-sm-12._horarios
+                                    h4 Horarios
+                                    dl
+                                        dt
+                                            i.fa.fa-clock-o
+                                        dd  
+                                            strong Lun - Vie
+                                            span  10 a 19
+                                        
+                                        dt
+                                            i.fa.fa-clock-o
+                                        dd  
+                                            strong Sab
+                                            span  10 a 13
+                                        
+                                        dt
+                                            i.fa.fa-clock-o
+                                        dd  
+                                            strong Dom
+                                            span  Cerrado
+                                        
+                        
+                    .col-xs-24.col-sm-12
+                        ._block
+                            h4 Escribinos tu consulta
+                            form._form
+                                input(placeholder="Nombre", type="text")
+                                input(placeholder="Email",type="email")
+                                label Mensaje
+                                textarea(rows="7")
+                                button.btn._submit(type="submit") Enviar
+                                
+            .embed-responsive._map
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62475.78173550588!2d-58.487677280905714!3d-34.61733866513783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos+Aires%2C+CABA!5e0!3m2!1ses!2sar!4v1472137314421", style="border:0", allowfullscreen)
+                            
+                    
+    include ./_modules/modal/modal

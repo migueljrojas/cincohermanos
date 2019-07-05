@@ -1,0 +1,75 @@
+extends ../_layouts/base
+
+include ../_modules/hero/hero
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.contact
+
+        +hero('/images/contact/hero.jpg', site.data.contact.heading, site.data.contact.subHeading)
+        
+        .container.-vertical-space
+            .row
+                .col-xs-24.col-sm-12
+                    ._block.-alt-bg
+                        h4 Seguínos en las redes sociales
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        ul._social
+                            each item in site.data.social
+                                li
+                                    a(href=item.url)
+                                        i(class="fa fa-#{item.name}")
+                        
+                    ._block.-alt-bg
+                        .row
+                            .col-xs-24.col-sm-12._data
+                                h4 Dirección
+                                dl
+                                    dt
+                                        i.fa.fa-map-marker
+                                    dd  Calle 1234, Ushuaia
+                                    
+                                    dt
+                                        i.fa.fa-phone
+                                    dd  (123) 456-7890
+                                    
+                                    dt
+                                        i.fa.fa-envelope
+                                    dd  
+                                        a(href="mailto:contacto@cincohermanos.com") contacto@cincohermanos.com
+                                        
+                                    
+                            .col-xs-24.col-sm-12._horarios
+                                h4 Horarios
+                                dl
+                                    dt
+                                        i.fa.fa-clock-o
+                                    dd  
+                                        strong Lun - Vie
+                                        span  10 a 19
+                                    
+                                    dt
+                                        i.fa.fa-clock-o
+                                    dd  
+                                        strong Sab
+                                        span  10 a 13
+                                    
+                                    dt
+                                        i.fa.fa-clock-o
+                                    dd  
+                                        strong Dom
+                                        span  Cerrado
+                .col-xs-24.col-sm-12
+                    h4 Escribinos tu consulta
+                    form._form
+                        input(placeholder="Nombre", type="text")
+                        input(placeholder="Email",type="email")
+                        label Mensaje
+                        textarea(rows="7")
+        
+        .embed-responsive.embed-responsive-16by9
+            iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62475.78173550588!2d-58.487677280905714!3d-34.61733866513783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos+Aires%2C+CABA!5e0!3m2!1ses!2sar!4v1472137314421", style="border:0", allowfullscreen)
+            

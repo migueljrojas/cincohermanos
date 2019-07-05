@@ -1,0 +1,72 @@
+#lightbox{
+  .modal-header{
+    padding:0;
+    height: 0;
+    border:none;
+    button.close{
+      background: $white;
+      color:$black;
+      width:30px;
+      height:30px;
+      position: absolute;
+      top:-35px;
+      right:-15px;
+      border:2px solid $white;
+      border-radius: 50%;
+      opacity: 1;
+      font-size: 25px;
+    }
+  }
+  ._lightboxImg{
+    width:100%;
+  }
+
+  ._lightboxVideo{
+        width: 100%;
+        min-height: 300px;
+        border:none;
+
+        @include breakpoint(sm) {
+            min-height: 400px;
+        }
+
+        @include breakpoint(lg) {
+            min-height: 600px;
+        }
+  }
+
+  &.-video{
+
+      .modal-body{
+          height:0;
+          padding-bottom: 56.5%;
+          position: relative;
+          overflow: hidden;
+      }
+
+      ._lightboxImg{
+          display: none;
+      }
+  }
+
+  &.-image{
+      ._lightboxVideo{
+          display: none;
+      }
+  }
+}
+
+.modal-dialog {
+    width: 90%;
+    max-width: 1000px;
+    margin: 100px auto 0;
+}
+
+.modal-body{
+    padding: 0;
+    background: #000;
+}
+
+.modal-backdrop.in{
+    opacity: .75;
+}

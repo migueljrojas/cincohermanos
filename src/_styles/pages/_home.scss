@@ -1,0 +1,155 @@
+.home {
+
+    section {
+        padding: $base 0;
+        @include breakpoint(sm){
+            padding: $base*2 0;
+        }
+    }
+
+    ._tophero {
+        background-attachment: fixed;
+        background-size: cover;
+        background: $darkBlue url('/images/home/top-hero.jpg') no-repeat center center;
+        color: $textLight;
+        height: 75vh;
+        position: relative;
+        text-align: center;
+
+        ._button {
+            bottom: $base/2;
+            left:20px;
+            position: absolute;
+            right:20px;
+            margin: auto;
+
+            @include breakpoint(sm){
+                bottom: 35%;
+            }
+        }
+    }
+
+    ._headtitle{
+        font-size: 28px;
+        left:10px;
+        letter-spacing: -1.2px;
+        margin: auto;
+        position: absolute;
+        right:10px;
+        text-transform: uppercase;
+        top:$base*2;
+
+        span{
+            color: $accentLight;
+        }
+
+        @include breakpoint(sm){
+            font-size:42px;
+            top:$base*4;
+        }
+    }
+
+    ._subheading {
+        bottom: $base*2.5;
+        font-size: 1.2em;
+        font-weight: 400;
+        left:20px;
+        margin: auto;
+        position: absolute;
+        right:20px;
+        text-shadow: 0 0 2px rgba(0,0,0,.5);
+
+        @include breakpoint(sm){
+            bottom: $base*1.5;
+            font-size:1.4em;
+            width: 60%;
+        }
+    }
+
+    ._imgcover {
+        height:40vh;
+        max-height: 800px;
+        overflow: hidden;
+        width:100%;
+        position: relative;
+
+        @include breakpoint(sm) {
+            height:80vh;
+        }
+
+        img{
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: auto;
+            left:50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    ._quotebreak {
+        position: relative;
+        padding: 0;
+    }
+
+    ._quotebreak__quote {
+        position: absolute;
+        font-size: 32px;
+        color:#fff;
+        z-index:10;
+        bottom:$base;
+        left:$base;
+        font-family: $quoteFont;
+        font-style: italic;
+
+        @include breakpoint(sm) {
+            font-size: 48px;
+
+            span {
+                display: inline-block;
+                width: $base*1.5;
+            }
+        }
+    }
+
+    ._services,
+    ._testimonios,
+    ._gallery,
+    ._contact{
+        padding-bottom: 0;
+    }
+
+    ._tab {
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            li{
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: $base;
+
+                @include customBreakpoint(670px) {
+                    float: left;
+                    margin-right: $base;
+
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    ._contact{
+        ._block{
+            background: $bg;
+        }
+    }
+
+    ._map{
+        iframe{
+            max-height: 600px;
+        }
+    }
+}

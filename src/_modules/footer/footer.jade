@@ -1,0 +1,20 @@
+footer.footer
+    .container
+        .row
+            .col-xs-24.col-sm-8
+                p.small.strong
+                    | 2017  
+                    &copy;
+                    | Cinco Hermanos. Todos los derechos reservados
+            
+            .col-xs-24.col-sm-8
+                p.small
+                    | Diseño y desarrollo por  
+                    a(href="http://www.elemsoft.com.ar") Elemsoft
+                
+            .col-xs-24.col-sm-8.pull-right
+                ul._social
+                    each item in site.data.social
+                        li
+                            a(href=item.url)
+                                i(class="fa fa-#{item.name}")

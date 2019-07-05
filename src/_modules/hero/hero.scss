@@ -1,0 +1,76 @@
+// hero styles
+.hero{
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    background: #000;
+
+    @include breakpoint(sm){
+        height: 400px;
+    }
+
+    @include breakpoint(md){
+        height: 600px;
+    }
+
+    ._image{
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: auto;
+        left:50%;
+        transform: translateX(-50%);
+        min-width: 100%;
+        opacity: .6;
+    }
+
+    ._title{
+        padding: 0 $base/2;
+        position: absolute;
+        top:15%;
+        color:$textLight;
+        left:0;
+        right:0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        font-size: 2em;
+        text-shadow: 2px 2px 10px rgba(0,0,0,.7);
+
+        @include breakpoint(sm){
+            font-size:3em;
+            top:30%;
+        }
+
+        @include breakpoint(md){
+            font-size:4em;
+            top:50%;
+        }
+    }
+
+    ._subtitle{
+        padding: 0 $base/2;
+        position: absolute;
+        top:50%;
+        color:$textLight;
+        left:0;
+        right:0;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        font-size: 1.2em;
+        text-shadow: 2px 2px 10px rgba(0,0,0,.7);
+
+        @include breakpoint(sm){
+            font-size:1.6em;
+            width: 80%;
+            top:60%;
+        }
+
+        @include breakpoint(md){
+            font-size:1.8em;
+            width: 60%;
+            top:70%;
+        }
+    }
+}

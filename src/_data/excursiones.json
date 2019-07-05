@@ -1,0 +1,18 @@
+{
+    "heading": "Excursiones",
+    "subHeading": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "list":[
+        {
+            "link": "#",
+            "img": "http://miproximoviaje.com.ar/imagenes/calafate_moreno_puente_de_hielo.jpg",
+            "title": "Excursion 1",
+            "desc": "Lorem ipsum dolor sit amet"
+        },
+        {
+            "link": "#",
+            "img": "http://www.nuevorumbo.tur.ar/paquetes/JT0049/prod_289_20140125070158.jpg",
+            "title": "Excursion 2",
+            "desc": "Lorem ipsum dolor sit amet"
+        }
+    ]
+}

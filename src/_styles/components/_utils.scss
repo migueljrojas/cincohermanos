@@ -1,0 +1,45 @@
+.-alt-bg {
+    background-color: $bgSecondary;
+}
+
+.-dark-bg {
+    background-color: $bgDark;
+    color: $textLight;
+}
+
+.-text-light{
+    color: $textLight;
+}
+
+.-hide {
+    display: none!important;
+}
+
+.-hideOverflow {
+    overflow: hidden;
+}
+
+.-vertical-space{
+    padding-top: $base;
+    padding-bottom: $base;
+
+    &-top {
+        padding-top: $base;
+    }
+
+    &-bottom {
+        padding-bottom: $base;
+    }
+}
+
+.embed-responsive{
+    padding-bottom: 56.25%;
+
+    @include breakpoint(sm){
+        padding-bottom: 45%;
+    }
+
+    @include breakpoint(md){
+        padding-bottom: 30%;
+    }
+}
